@@ -1,15 +1,16 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.main`
+  width: 100%;
   display: flex;
-  padding: 2rem 10rem;
+  flex-direction: column;
 `
 export const HomeSection = styled.section`
-  width: 100vw;
+  width: 100%;
   height: 34rem;
   display: flex;
-  justify-content: space-between;
-  margin-top: 3.1255rem;
+  padding: 4rem;
+  justify-content: space-around;
 
   img {
     width: 29.75rem;
@@ -19,7 +20,6 @@ export const HomeSection = styled.section`
 
 export const HomeInfo = styled.div`
   width: 36.75rem;
-  align-self: stretch;
 
   & h1 {
     color: ${(props) => props.theme.base_title};
@@ -28,7 +28,7 @@ export const HomeInfo = styled.div`
     font-style: normal;
     font-weight: 800;
     line-height: 130%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
 
   & span {
@@ -79,5 +79,26 @@ export const HomeAdvantages = styled.div`
 
   & div:nth-child(4) svg {
     background-color: ${(props) => props.theme.purple};
+  }
+`
+
+export const CoffeesSection = styled.section`
+  width: 100%;
+
+  & h3 {
+    font-size: ${({ theme }) => theme.fonts.sizes.huge};
+    color: ${({ theme }) => theme.colors['base-subtitle']};
+  }
+
+  & > div {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    & > div {
+      margin: 2rem 0;
+    }
   }
 `

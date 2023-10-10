@@ -1,17 +1,28 @@
-import { Routes, Route } from 'react-router-dom'
-import { Home } from './pages/Home/index'
-import { Shopcart } from './pages/Shopcart/index'
-import { Success } from './pages/Success/index'
-import { DefaultLayout } from './layouts/DefaultLayout/index'
+import {
+  BrowserRouter as Router,
+  Routes as Switch,
+  Route,
+} from 'react-router-dom'
 
-export function Router() {
+import { Home } from './pages/Home'
+import { Shopcart } from './pages/Shopcart'
+import { Success } from './pages/Success'
+
+import { Header } from './components/Header'
+
+import { Container } from './components/Container'
+
+export const Routes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<DefaultLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/shopcart" element={<Shopcart />} />
-        <Route path="/success" element={<Success />} />
-      </Route>
-    </Routes>
+    <Router>
+      <Container>
+        <Header />
+        <Switch>
+          <Route path="/Shopcart/success" element={<Success />} />
+          <Route path="/Shopcart" element={<Shopcart />} />
+          <Route path="/" element={<Home />} />
+        </Switch>
+      </Container>
+    </Router>
   )
 }

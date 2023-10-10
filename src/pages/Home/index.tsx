@@ -2,6 +2,8 @@ import { HomeAdvantages, HomeContainer, HomeInfo, HomeSection } from './styles'
 import coffeeDelivery from '../../assets/coffee-delivery.svg'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 
+// import { coffees } from '../../coffees'
+
 export function Home() {
   return (
     <HomeContainer>
