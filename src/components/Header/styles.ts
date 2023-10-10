@@ -16,6 +16,7 @@ export const HeaderCointainer = styled.header`
     a:first-child {
       width: 9.6rem;
       height: 2.375rem;
+      cursor: default;
       display: flex;
       justify-content: center;
       align-items: center;
